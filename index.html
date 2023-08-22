@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Play CDN Tailwind  -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Scirpt Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,700;1,600&display=swap" rel="stylesheet" />
+    <!-- Font -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              plus: ['Plus Jakarta Sans'],
+            },
+            animation: {
+              'spin-slow': 'spin 4s linear infinite',
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Red Border -->
+
+    <style type="text/tailwindcss">
+      * {
+        border: solid red 1px;
+      }
+      .navbar-scrolled {
+        box-shadow: 2px 2px 30px #000000;
+      }
+      .ext-scrolled {
+        color: black;
+      }
+      .navbar {
+        transition: all 0.5s;
+      }
+    </style>
+    <!-- Title Web & Icon -->
+    <title>Bakso Patih</title>
+    <link rel="icon" href="./img/logo.svg" type="image/x-icon" />
+    <!-- Script Navbar Menu -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- ..... -->
+  </head>
+  <body>
+    <!-- Hero -->
+    <!-- Navbar -->
+    <div class="w-full h-32 fixed bg-transparent top-0 flex z-50 justify-center">
+      <div class="flex w-full h-full bg-[#631D25] navbar mx-auto my-auto py-2 px-8 gap-3 justify-between backdrop-blur-md">
+        <div class="flex items-center gap-4 w-[220px]">
+          <a href="#hero" class="md:h-2/3 my-auto"><img src="./img/logo.svg" alt="" class="w-full h-full" /></a>
+          <h1 class="text-2xl font-plus font-bold text-white txt0">BaksoPatih</h1>
+        </div>
+
+        <!-- Nav Asli -->
+
+        <div class="hidden md:flex gap-4 justify-center">
+          <a href="#about" class="flex"><button class="text-xl text-white txt">Tentang Kami</button></a>
+          <a href="#testimoni" class="flex"><button class="text-xl text-white txt1">Testimoni</button></a>
+          <a href="#product" class="flex"><button class="text-xl text-white txt2">Produk Kami</button></a>
+        </div>
+
+        <!-- Tombol MarketPlace -->
+        <div class="md:flex items-center hidden gap-6 w-[220px] justify-end">
+          <a class="h-16 flex justify-center items-center w-16 rounded-full bg-[#48B74F]" href="https://www.tokopedia.com/baksopatih"><img src="./img/tokopedia.svg" alt="" /></a>
+          <a class="h-16 flex justify-center items-center w-16 rounded-full bg-[#FE5722]" href="https://shopee.co.id/rifhul"><img src="./img/shopee.svg" alt="" /></a>
+        </div>
+
+        <!-- Tombol Menu -->
+
+        <button class="bg-transparent aspect-square md:hidden text-center text-white">
+          <ion-icon onclick="onToggleMenu(this)" name="menu" class="txt text-2xl cursor-pointer my-auto"></ion-icon>
+        </button>
+      </div>
+
+      <!-- Nav Menu -->
+      <div class="nav-links flex flex-col absolute items-start bg-[#631D25] w-full p-4 shadow-2xl bottom-[120%] md:hidden text-center h-60 backdrop-blur-md">
+        <a href="#about"><button class="bg-transparent py-2 px-4 w-fit font-plus font-light text-white">Tentang Kami</button></a>
+        <a href="#testimoni"><button class="bg-transparent py-2 px-4 w-fit font-plus font-light text-white">Testimoni</button></a>
+        <a href="#product"><button class="bg-transparent py-2 px-4 w-fit font-plus font-light text-white">Produk Kami</button></a>
+        <div class="flex items-center gap-6 w-[220px] justify-start mt-4">
+          <a class="h-16 flex justify-center items-center w-16 rounded-full bg-[#48B74F]" href="https://www.tokopedia.com/baksopatih"><img src="./img/tokopedia.svg" alt="" /></a>
+          <a class="h-16 flex justify-center items-center w-16 rounded-full bg-[#FE5722]" href="https://shopee.co.id/rifhul"><img src="./img/shopee.svg" alt="" /></a>
+        </div>
+      </div>
+      <!-- Akhir Navmenu -->
+    </div>
+    <!-- Navbar -->
+    <section class="container max-w-full h-screen relative overflow-hidden bg-[#631D25] z-20" id="hero">
+      <!-- H1  -->
+      <div class="flex flex-col container max-w-full gap-4 absolute top-1/4">
+        <h1 class="font-plus text-center leading-tight sm:w-4/6 text-[32px] md:text-[48px] lg:w-2/5 text-white mx-auto">Bakso Lezat Dengan Daging Sapi Pilihan</h1>
+        <h1 class="font-plus text-center leading-tight text-white w-5/6 mx-auto sm:w-4/6 md:text-[24px] font-light lg:w-1/3">Bakso Frozen Food Lezat Tanpa pengawet dengan pilihan variasi rasa</h1>
+        <!-- Buton CTA -->
+        <a href="https://api.whatsapp.com/send/?phone=6285710699669&text&type=phone_number&app_absent=0" class=" z-50 hover:shadow-xl container cursor-pointer mx-auto flex bg-white px-4 py-2 justify-center items-center rounded-full gap-2 w-2/3 md:w-1/3 lg:w-1/5"
+          ><h2 class="text-[#631D25] font-plus font-medium">Order Sekarang</h2>
+          <img class="h-2/3" src="./img/logowamerah.svg" alt=""
+        /></a>
+      </div>
+      <!-- Hero Image -->
+      <div class="w-full flex justify-center overflow-hidden h-[280px] absolute bottom-0 mx-auto z-10">
+        <img class="mx-auto min-w-[700px]" src="./img/heroimage.png" alt="" />
+      </div>
+      <!-- Background Awan -->
+      <img class="w-full absolute bottom-0 z-0 opacity-20 min-w-[1500px]" src="./img/awanbackgeound.svg" alt="" />
+      <!-- Background Awan -->
+    </section>
+
+    <!-- About Us -->
+    <section class="container relative h-fit max-w-full" id="about">
+      <!-- Perawanan Abosulut -->
+      <img class="opacity-20 absolute z-0 right-0 top-10" src="./img/awan 1.svg" alt="" />
+      <img class="opacity-20 absolute z-0 left-12 top-10" src="./img/awan 2.svg" alt="" />
+      <!-- .... -->
+      <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 lg:gap-44 my-20">
+        <div class="flex flex-col items-center md:items-start max-w-full gap-6 scale-90 md:scale-100">
+          <h1 class="font-plus font-bold text-lg text-[#631D25]">Apa Itu Bakso Patih</h1>
+          <p class="w-[390px] text-justify font-plus text-xl">Baksopatih Adalah Bakso Frozen Yang Dibuat Dengan Daging Sapi Olahan Segar Tanpa Pengawet Ataupun Pengenyal Namun BaksoPatih Bisa Tahan Sampai 3 Bulan Lho</p>
+          <a href="https://www.instagram.com/baksopatih/" class="flex px-6 py-4 items-center bg-[#631D25] w-[350px] rounded-xl gap-4 justify-center hover:bg-[#571f25]"
+            ><p class="font-plus text-xl text-white">Cek Social Media Kami</p>
+            <img class="h-4/5" src="./img/instagram.svg" alt=""
+          /></a>
+        </div>
+        <!-- Image About Us -->
+        <div class="flex flex-col md:flex-row gap-8 max-w-full overflow-hidden z-10">
+          <div class="w-[300px] h-[400px] rounded-xl bg-black flex bg-cover" style="background-image: url(./img/about1.png)">
+            <div class="px-6 py-4 bg-white flex justify-center w-1/2 h-fit mx-auto mt-6 font-plus font-bold text-[16px] text-center text-[#631D25]">100% Halal</div>
+          </div>
+          <div class="w-[300px] h-[400px] rounded-xl bg-black flex bg-cover" style="background-image: url(./img/about2.png)">
+            <div class="px-6 py-4 bg-white flex justify-center w-1/2 h-fit mx-auto mt-6 font-plus font-bold text-[16px] text-center text-[#631D25]">Variasi Rasa</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why Us -->
+    <section class="container relative h-fit max-w-full bg-[#FDE9DD]" id="whyus">
+      <div class="flex flex-col gap-4 md:gap-10 my-20 md:mb-60">
+        <h1 class="mx-auto font-plus font-medium text-2xl w-[300px] lg:text-[40px] lg:w-1/3 text-[#631D25] text-center">Alasan Kenapa Kamu Harus Pilih Bakso Patih</h1>
+        <!-- 3ICON -->
+        <div class="flex flex-col scale-75 -mt-16 md:mt-0 gap-6 md:flex-row lg:scale-100 mx-auto">
+          <img src="./img/whyus1.svg" alt="" />
+          <img src="./img/whyus2.svg" alt="" />
+          <img src="./img/whyus3svg.svg" alt="" />
+        </div>
+      </div>
+      <!-- Absoulote BG -->
+      <div class="w-full flex justify-center items-end overflow-hidden h-[280px] absolute bottom-0 mx-auto z-10">
+        <img class="mx-auto min-w-[1400px] md:min-w-full" src="./img/bgwhyus.svg" alt="" />
+      </div>
+      <!-- ... -->
+    </section>
+    <!-- Produk Kami -->
+    <section class="container relative max-w-full h-fit" id="product">
+      <!-- Absoulote BG -->
+      <div class="w-full flex justify-center items-end overflow-hidden h-[280px] opacity-20 absolute top-0 mx-auto ">
+        <img class="mx-auto min-w-[1400px] lg:min-w-[1550px] " src="./img/awanatas.svg" alt="" />
+      </div>
+      <div class="w-full flex justify-center items-end overflow-hidden h-[320px] opacity-20 absolute bottom-0 mx-auto ">
+        <img class="mx-auto min-w-[1400px] lg:min-w-[1550px] " src="./img/awanbawah.svg" alt="" />
+      </div>
+      <!-- ... -->
+      <div class="flex flex-col w-full justify-center items-center gap-8 lg:gap-12  my-60">
+        <!-- Siap Saji -->
+        <div class="flex flex-col items-center gap-4">
+          <img src="./img/headproduct.svg" alt="" />
+          <h1 class="font-plus text-xl">Dengan Berbagai Varian Rasa</h1>
+        </div>
+        <div class="flex justify-center font-plus font-bold text-xl rounded-full text-white bg-[#631D25] px-4 py-2 lg:scale-125">Bakso Siap Saji</div>
+        <!-- Image Product Siap Saji -->
+        <!-- Scroll Kartu -->
+        <div class="flex flex-row  px-[15%] md:px-0 md:justify-center h-[500px] gap-8 lg:gap-8 overflow-scroll overflow-x-auto md:overflow-hidden w-full snap-x z-30   ">
+          <!-- Siapsaji1 -->
+          <img class="snap-center md:w-1/3 lg:w-1/4" src="./img/siapsaji1.svg" alt="">
+          <!-- Siapsaji2 -->
+          <img class="snap-center md:w-1/3 lg:w-1/4" src="./img/siapsaji2.svg" alt="">
+          <!-- Siapsaji3 -->
+         <img class="snap-center md:w-1/3 lg:w-1/4" src="./img/siapsaji3.svg" alt="">
+          <!-- Kartu Bayangan -->
+      </div>
+      <!--  Bakso Frozen -->
+      <div class="flex justify-center font-plus font-bold text-xl rounded-full text-white bg-[#631D25] px-4 py-2 lg:scale-125">Bakso Frozen</div>
+      <!-- Scroll Kartu -->
+      <div class="flex flex-row  px-[15%] md:px-0 md:justify-center gap-8 lg:gap-20 overflow-scroll overflow-x-auto md:overflow-hidden w-full snap-x z-30">
+        <!-- frozen1 -->
+        <img class="snap-center md:w-1/5 lg:w-1/6" src="./img/frozen1.svg" alt="">
+        <!-- frozen2 -->
+        <img class="snap-center md:w-1/5 lg:w-1/6" src="./img/frozen2.svg" alt="">
+        <!-- frozen3 -->
+       <img class="snap-center md:w-1/5 lg:w-1/6" src="./img/frozen3.svg" alt="">
+        <!-- frozen4 -->
+       <img class="snap-center md:w-1/5 lg:w-1/6" src="./img/frozen4.svg" alt="">
+        <!-- Kartu Bayangan -->
+    </div>
+    </section>
+    <!-- Testimoni -->
+    <section class="container relative max-w-full h-fit bg-gradient-to-r from-[#F9CEB4] to-[#FDE9DD]" id="testimoni">
+      <div class="flex flex-col h-fit justify-center items-center gap-12 my-32">
+        <h1 class="font-plus font-medium text-center w-[300px] text-3xl text-[#631D25]">Apa Kata Mereka Tentang Bakso Patih</h1>
+        <!-- Card Testi -->
+         <!-- Scroll Kartu -->
+         <div class="flex flex-row  px-[15%] md:px-0 md:justify-center h-[500px] gap-8 lg:gap-8 overflow-scroll overflow-x-auto md:overflow-hidden w-full snap-x z-30   ">
+          <!-- Siapsaji1 -->
+          <img class="snap-center md:w-1/3 lg:w-1/4" src="./img/testi1.svg" alt="">
+          <!-- Siapsaji2 -->
+          <img class="snap-center md:w-1/3 lg:w-1/4" src="./img/testi2.svg" alt="">
+          <!-- Siapsaji3 -->
+         <img class="snap-center md:w-1/3 lg:w-1/4" src="./img/testi3.svg" alt="">
+          <!-- Kartu Bayangan -->
+      </div>
+      </div>
+    </section>
+    <!-- Last CTA -->
+    <section class="container relative max-w-full h-fit bg-[#631D25] " id="lastcta">
+      <div class="flex flex-col items-center gap-10 mt-16 mb-80">
+        <h1 class="font-plus font-medium text-white text-3xl w-[320px] text-center">Yuk Pesan Bakso Patih Sekarang Juga !</h1>
+        <div class="flex  items-center gap-6  justify-end">
+          <a class="h-24 flex justify-center items-center w-24 rounded-full bg-[#48B74F]" href="https://www.tokopedia.com/baksopatih"><img src="./img/tokopedia.svg" alt="" class="h-1/2"/></a>
+          <a class="h-24 flex justify-center items-center w-24 rounded-full bg-[#FE5722]" href="https://shopee.co.id/rifhul"><img src="./img/shopee.svg" alt="" class="h-1/2" /></a>
+          <a class="h-24 flex justify-center items-center w-24 rounded-full bg-[#0DC143]" href="https://api.whatsapp.com/send/?phone=6285710699669&text&type=phone_number&app_absent=0"><img src="./img/logowa.svg" alt="" class="h-1/2" /></a>
+        </div>
+      </div>
+      <!-- Backroundddss -->
+      <div class="w-full flex justify-center overflow-hidden h-[280px] absolute bottom-0 mx-auto z-10">
+        <img class="mx-auto min-w-[1300px]" src="./img/lastcta.svg" alt="" />
+      </div>
+     
+       <!-- Background Awan -->
+       <div class="w-full flex justify-center overflow-hidden h-[280px] absolute bottom-0 mx-auto z-0">
+       <img class="absolute bottom-0 z-0 opacity-20 min-w-[1500px] " src="./img/awanbackgeound.svg" alt="" />
+      </div>
+       <!-- Background Awan -->
+    </section>
+    <!-- Footer -->
+    <section class="container relative max-w-full h-fit">
+      <div class="flex flex-col md:flex-row sm:mx-10 mt-12 mb-4 gap-8  md:justify-between">
+        <!-- Logo & Lokasi -->
+        <div class="flex flex-col gap-4 mx-10 md:mx-0">
+          <img src="./img/footlogo.svg" alt="">
+          <img src="./img/locationlogo.svg" alt="">
+        </div>
+        <!-- 3Market -->
+        <div class="flex flex-col items-center md:items-start md:flex-row gap-4">
+          <a href="https://api.whatsapp.com/send/?phone=6285710699669&text&type=phone_number&app_absent=0" class="flex items-center text-white px-4 py-2 w-[173px]  gap-2 rounded-full h-[55px] bg-[#0DC143] ">
+            <h1 class="font-plus font-medium text-xl">Whatsapp</h1>
+            <img src="./img/logowa.svg" alt="" class="h-5/6">
+          </a>
+         
+          <a href="https://shopee.co.id/rifhul" class="flex items-center text-white px-4 py-2 w-[173px] h-[55px] justify-between rounded-full bg-[#FE5722] ">
+            <h1 class="font-plus font-medium text-xl">Shopee</h1>
+            <img src="./img/shopee.svg" alt="">
+          </a>
+          <a href="https://www.tokopedia.com/baksopatih" class="flex items-center text-white px-4 py-2 w-[173px] h-[55px] gap-2 rounded-full bg-[#48B74F] ">
+            <h1 class="font-plus font-medium text-xl">Tokopedia</h1>
+            <img src="./img/tokopedia.svg" alt="">
+          </a>
+        </div>
+      </div>
+       <!-- Copry Right -->
+       <div class="flex max-w-full py-4 justify-center mx-5 md:mx-10 border-t-2 border-[#631D25] mb-6 text-center font-plus">
+        Baksopatih Copyright@2023 All Right Reserved.
+      </div>
+    </section>
+    <!-- Script Toggle -->
+    <script>
+      const navLinks = document.querySelector('.nav-links');
+      function onToggleMenu(e) {
+        e.name = e.name === 'menu' ? 'close' : 'menu';
+        navLinks.classList.toggle('-bottom-56');
+      }
+    </script>
+    <!-- Script Toggle -->
+    <!-- Script Navbar -->
+    <script>
+      const navEL = document.querySelector('.navbar');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 56) {
+          navEL.classList.add('navbar-scrolled');
+        } else if (window.scrollY < 56) {
+          navEL.classList.remove('navbar-scrolled');
+        }
+      });
+    </script>
+
+  </body>
+</html>
